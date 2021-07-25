@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import {Second} from "./components/Second/Second";
+import {Remote} from "./components/Remote/Remote";
+
+function App () {
+    const [counter, setCounter] = useState (0);
+    const counterUpp = () => {
+        setCounter (counter + 1)
+    }
+
+
+    const reset = () => {
+        setCounter (0)
+    }
+
+    return (
+        <div className="App">
+            <div className={"remote"}>
+                <Remote/>
+            </div>
+            <div className={"counter"}>
+                <Second counter={counter} counterUpp={counterUpp} reset={reset}/>
+            </div>
+
+        </div>
+    );
 }
 
 export default App;
