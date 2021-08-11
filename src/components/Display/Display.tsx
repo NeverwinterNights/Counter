@@ -3,7 +3,7 @@ import styles from "./Display.module.css"
 
 type  DisplayPropsType = {
     counter: number
-
+    max:()=> number
 
 }
 
@@ -11,7 +11,7 @@ type  DisplayPropsType = {
 export const Display =(props:DisplayPropsType) => {
  return (
         <div className={styles.display}>
-            <span className={props.counter===5 ? styles.number : ""}>{props.counter}</span>
+            <span className={props.counter===props.max() ? styles.number : ""}>{props.counter}</span>
         </div>
     );
 };

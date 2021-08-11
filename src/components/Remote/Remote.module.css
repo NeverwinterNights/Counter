@@ -1,0 +1,31 @@
+.remote {
+    margin: 50px;
+    border: 1px solid black;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 50px;
+
+}
+
+.max_wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: 0px 0px 20px 0px;
+}
+
+.start_wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: 0px 0px 40px 0px;
+
+}
